@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
     String name = 'Pradip';
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        // backgroundColor: Colors.blue,
         title: Text('Pradips Tech'),
       ),
       body: Center(
