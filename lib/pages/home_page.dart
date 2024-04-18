@@ -10,15 +10,17 @@ class HomePage extends StatelessWidget {
     String name = 'Pradip';
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.white,
         title: const Text(
           'Pradips Tech',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
       ),
       drawer: const MyDrawer(),
       body: Center(
-        child: Text("welcome to the $days days of flutter by $name"),
+        child: Container(
+          child: Text("welcome to the $days days of flutter by $name"),
+        ),
       ),
     );
   }
