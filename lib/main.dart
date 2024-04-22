@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: ThemeData(
           primarySwatch: Colors.blue,
-          fontFamily: GoogleFonts.lato().fontFamily,
+          fontFamily: GoogleFonts.poppins().fontFamily,
           primaryTextTheme: GoogleFonts.latoTextTheme()),
       initialRoute: MyRoutes.homeRoute,
       routes: {
@@ -29,4 +29,8 @@ class MyApp extends StatelessWidget {
       },
     );
   }
+
+  //colors
+  static Color creamColor = const Color(0xfff4f5f5);
+  static Color darkBluesh = const Color(0xff403b58);
 }
