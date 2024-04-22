@@ -5,6 +5,7 @@ import 'package:thirty_days_of_flutter/pages/cart_page.dart';
 import 'package:thirty_days_of_flutter/pages/home_page.dart';
 import 'package:thirty_days_of_flutter/pages/login_page.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,12 +18,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       theme: ThemeData(
           primarySwatch: Colors.blue,
           fontFamily: GoogleFonts.poppins().fontFamily,
           primaryTextTheme: GoogleFonts.latoTextTheme()),
-      initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.loginRoute,
       routes: {
         "/": (context) => const LoginPage(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
@@ -35,4 +36,6 @@ class MyApp extends StatelessWidget {
   //colors
   static Color creamColor = const Color(0xfff4f5f5);
   static Color darkBluesh = const Color(0xff403b58);
+  static Color darkCreamColor = Vx.gray800;
+  static Color lightBlueshColor = Vx.purple400;
 }

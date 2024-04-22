@@ -5,8 +5,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:thirty_days_of_flutter/Utils/routes.dart';
-import 'package:thirty_days_of_flutter/widgets/home_Widgets/catalog_header.dart';
-import 'package:thirty_days_of_flutter/widgets/home_Widgets/catalog_list.dart';
+import 'package:thirty_days_of_flutter/pages/home_Widgets/catalog_header.dart';
+import 'package:thirty_days_of_flutter/pages/home_Widgets/catalog_list.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'package:thirty_days_of_flutter/main.dart';

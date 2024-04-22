@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:thirty_days_of_flutter/main.dart';
 import 'package:thirty_days_of_flutter/models/catalog.dart';
-import 'package:thirty_days_of_flutter/widgets/home_Widgets/catalog_image.dart';
+import 'package:thirty_days_of_flutter/pages/home_Widgets/catalog_image.dart';
 import 'package:thirty_days_of_flutter/pages/home_page.dart';
 import 'package:velocity_x/velocity_x.dart';
 
