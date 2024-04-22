@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:thirty_days_of_flutter/models/catalog.dart';
 import 'package:thirty_days_of_flutter/pages/home_Widgets/catalog_item.dart';
 import 'package:thirty_days_of_flutter/pages/home_detail_page.dart';
-
 import 'package:thirty_days_of_flutter/pages/home_page.dart';
 
 class CatalogList extends StatelessWidget {
