@@ -5,6 +5,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:thirty_days_of_flutter/Utils/routes.dart';
+import 'package:thirty_days_of_flutter/core/store.dart';
+import 'package:thirty_days_of_flutter/models/cart.dart';
 import 'package:thirty_days_of_flutter/pages/home_Widgets/catalog_header.dart';
 import 'package:thirty_days_of_flutter/pages/home_Widgets/catalog_list.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -23,6 +25,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int days = 30;
   String name = 'Pradip';
+
+  final url = "";
 
   @override
   void initState() {
@@ -44,15 +48,25 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final _cart = (VxState.store as MyStore).cart;
     return Scaffold(
         backgroundColor: MyApp.creamColor,
-        floatingActionButton: FloatingActionButton(
-            onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
-            backgroundColor: MyApp.darkBluesh,
-            child: const Icon(
-              CupertinoIcons.cart,
-              color: Colors.white,
-            )),
+        floatingActionButton: VxBuilder(
+          mutations: {AddMutation, RemoveMutation},
+          builder: (context, store, status) => FloatingActionButton(
+                  onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
+                  backgroundColor: MyApp.darkBluesh,
+                  child: const Icon(
+                    CupertinoIcons.cart,
+                    color: Colors.white,
+                  ))
+              .badge(
+                  color: Vx.red50,
+                  size: 22,
+                  count: _cart.items.length,
+                  textStyle: const TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold)),
+        ),
         drawer: const MyDrawer(),
         body: SafeArea(
           child: Container(
