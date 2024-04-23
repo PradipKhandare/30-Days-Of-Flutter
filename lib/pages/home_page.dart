@@ -12,7 +12,6 @@ import 'package:velocity_x/velocity_x.dart';
 import 'package:thirty_days_of_flutter/main.dart';
 import 'package:thirty_days_of_flutter/models/catalog.dart';
 import 'package:thirty_days_of_flutter/widgets/drawer.dart';
-import 'package:thirty_days_of_flutter/widgets/item_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

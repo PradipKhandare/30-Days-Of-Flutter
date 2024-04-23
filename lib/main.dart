@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:thirty_days_of_flutter/Utils/routes.dart';
+import 'package:thirty_days_of_flutter/core/store.dart';
 import 'package:thirty_days_of_flutter/pages/cart_page.dart';
 import 'package:thirty_days_of_flutter/pages/home_page.dart';
 import 'package:thirty_days_of_flutter/pages/login_page.dart';
@@ -8,7 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(VxState(store: MyStore(), child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
