@@ -37,7 +37,10 @@ class _cartTotal extends StatelessWidget {
           "\$9999".text.xl5.color(const Color.fromARGB(255, 43, 42, 42)).make(),
           30.widthBox,
           ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: "Buying not supported yet".text.make()));
+                  },
                   style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all(Colors.deepPurple)),
